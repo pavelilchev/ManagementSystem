@@ -5,6 +5,7 @@
     using System.Data.Entity;
     using System.Linq;
     using Models;
+    using Microsoft.AspNet.Identity;
 
     public class TaskService
     {
@@ -23,6 +24,12 @@
         public Task GetTaskById(int id)
         {
             return this.Data.Tasks.Find(id);
+        }
+
+        public void AddTask(Task task)
+        {
+            this.Data.Tasks.Add(task);
+            this.Data.SaveChanges();
         }
     }
 }

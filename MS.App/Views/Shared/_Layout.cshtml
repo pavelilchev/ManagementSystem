@@ -23,6 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Tasks", "Index", "Tasks")</li>
+                    <li>@Html.ActionLink("Create Task", "Create", "Tasks")</li>
                     @if (this.User.IsInRole("Admin"))
                     {
                         <li>@Html.ActionLink("Add User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>

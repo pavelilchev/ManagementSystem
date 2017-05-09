@@ -1,32 +1,42 @@
 ﻿@model MS.ViewModels.TaskViewModel
 
-<div class="single-task" data-taskid="@Model.Id">
-    <div class="">
-        <div class="row">
-            <div class="col-sm-6">
-                <p>
-                    @Model.Id.ToString() - @Model.Title
-                </p>
+<div class="single-task">
+    <div data-taskid="@Model.Id">
+        <div class="">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        @Model.Id.ToString() - @Model.Title
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <p>
-                    Created: @Model.CreatedDate.ToString("dd/MM/yyyy") | Due: @Model.DueDate | Status: @Model.Status
-                </p>
-            </div>
-            <div class="col-sm-3">
-                <p>
-                    Assigned to: @Model.AssignedTo
-                </p>
-            </div>
-            <div class="col-sm-3">
-                <p>
-                    @Model.Type
-                </p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        Created: @Model.CreatedDate.ToString("dd/MM/yyyy") | Due: @Model.DueDate | Status: @Model.Status
+                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <p>
+                        Assigned to: @Model.AssignedTo
+                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <p>
+                        @Model.Type
+                    </p>
+                </div>
             </div>
         </div>
     </div>
+    
+    <div  class="comments-wrapper"  data-commentpanel="@Model.Id">
+        <div data-comments="@Model.Id"></div>
 
-    <div class="comments-wrapper" data-comments="@Model.Id"></div>
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="" class="btn btn-primary">Add Comment</a>
+            </div>
+        </div>
+    </div>
 </div>

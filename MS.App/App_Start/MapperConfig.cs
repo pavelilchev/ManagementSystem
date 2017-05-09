@@ -1,5 +1,6 @@
 ﻿namespace MS.App
 {
+    using System;
     using System.Collections.Generic;
     using AutoMapper;
     using DTOModels;
@@ -23,6 +24,9 @@
                  .ForMember(tdto => tdto.AssignedToUsername, src => src.MapFrom(t => t.AssignedTo.UserName))
                  .ForMember(tdto => tdto.CreatedFromUsername, src => src.MapFrom(t => t.CreatedFrom.UserName))
                  .ForMember(tdto => tdto.Comments, src => src.MapFrom(t => Mapper.Map<ICollection<CommentDTO>>(t.Comments)));
+
+                cfg.CreateMap<TaskCreateViewModel, Task>()
+                   .ForMember(tdto => tdto.CreatedDate, src => src.MapFrom(t => DateTime.Now));
             });
         }
     }

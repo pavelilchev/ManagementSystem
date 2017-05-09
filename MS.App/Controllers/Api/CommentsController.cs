@@ -23,5 +23,20 @@
 
             return this.Ok(taskDto);
         }
+
+        [Route("api/remove/{id:int}")]
+        [HttpDelete]
+        public IHttpActionResult RemoveComment(int id)
+        {
+            var data = new ManagementSystemData();
+            var result = data.Comments.Remove(id);
+            data.SaveChanges();
+            if (result == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.Ok(result);
+        }
     }
 }
