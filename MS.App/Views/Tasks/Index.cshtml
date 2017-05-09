@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MS.ViewModels.TaskViewModel>
+@{
+    ViewBag.Title = "Tasks";
+}
+
+@Html.DisplayForModel()
+
+@section Scripts {
+    @Scripts.Render("~/bundles/api")
+}
