@@ -104,13 +104,13 @@ namespace MS.Data.Migrations
                 AssignedTo = context.Users.FirstOrDefault(u => u.UserName == "user1")
             };
 
-            context.Tasks.AddOrUpdate(t => t.Id, task1, task2, task3);
+            context.Tasks.AddOrUpdate(t => t.Title, task1, task2, task3);
             context.SaveChanges();
         }
         private void SeedComments(ManagementSystemDbContext context)
         {
             var taskId = context.Tasks.Find(1).Id;
-            var userId = context.Users.FirstOrDefault(u => u.UserName == "user1").Id;
+            var userId = context.Users.FirstOrDefault(u => u.UserName == "admin").Id;
 
             var comment1 = new Comment()
             {

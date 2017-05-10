@@ -17,12 +17,16 @@
 
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(250, MinimumLength = 5, ErrorMessage = "Task {0} should be between {2} and {1}")]
         public string Title { get; set; }
 
         public DateTime CreatedDate { get; set; }
 
         public DateTime? DueDate { get; set; }
 
+        [Required]
+        [StringLength(2500, MinimumLength = 5, ErrorMessage = "Task {0} should be between {2} and {1}")]
         public string Description { get; set; }
 
         public Status Status { get; set; }

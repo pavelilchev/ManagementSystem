@@ -17,6 +17,8 @@
 
         public CommentType Type { get; set; }
 
+        public string CommentType { get; set; }
+
         public DateTime? RemainderDate { get; set; }
     }
 }

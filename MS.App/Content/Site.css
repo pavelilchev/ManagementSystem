@@ -23,6 +23,10 @@ textarea {
     max-width: 280px;
 }
 
+.field-validation-error {
+    display: block;
+}
+
 #infoBox, #errorBox, #loadingBox {
     display: none;
     width: 80%;
@@ -57,9 +61,24 @@ textarea {
     border-top: 3px double black; 
 }
 
-.single-comment {
+.single-comment, .add-comment {
     margin: 10px auto;
     padding: 10px;
     border: 1px solid #cecece;
     border-radius: 10px;
+}
+
+ .add-comment {
+     display: none;
+ }
+
+.add-comment textarea {
+    max-width: 80%;
+}
+
+select {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px
 }

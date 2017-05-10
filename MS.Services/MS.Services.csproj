@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -53,6 +57,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -85,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentService.cs" />
     <Compile Include="TaskService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserService.cs" />
@@ -94,9 +100,17 @@
       <Project>{B3799D51-3206-4224-84CA-72D6CB410C91}</Project>
       <Name>MS.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MS.DTOModels\MS.DTOModels.csproj">
+      <Project>{13ACA832-B707-4686-9EC3-81B37854E4D9}</Project>
+      <Name>MS.DTOModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MS.Models\MS.Models.csproj">
       <Project>{D04D5B71-3817-42C7-96FF-3873AE2CA287}</Project>
       <Name>MS.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MS.ViewModels\MS.ViewModels.csproj">
+      <Project>{BA6B05B6-9A91-4031-8710-CB5588676D12}</Project>
+      <Name>MS.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

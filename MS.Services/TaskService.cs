@@ -5,7 +5,6 @@
     using System.Data.Entity;
     using System.Linq;
     using Models;
-    using Microsoft.AspNet.Identity;
 
     public class TaskService
     {

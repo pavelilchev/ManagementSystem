@@ -13,10 +13,14 @@
 
         public DateTime CreatedDate { get; set; }
 
+        public string NextActionDate { get; set; }
+
         public string DueDate { get; set; }
 
         public string AssignedTo { get; set; }
 
         public TaskType Type { get; set; }
+
+        public CommentCreateViewModel Comment { get; set; }
     }
 }

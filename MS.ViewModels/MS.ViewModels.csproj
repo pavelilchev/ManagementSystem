@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentCreateViewModel.cs" />
     <Compile Include="TaskCreateViewModel.cs" />
     <Compile Include="TaskViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
